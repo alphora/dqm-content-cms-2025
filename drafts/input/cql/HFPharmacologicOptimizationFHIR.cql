@@ -21,7 +21,7 @@ include hl7.fhir.us.cql.USCoreCommon version '2.0.0' called USCoreCommon
 include hl7.fhir.us.cql.USCoreElements version '2.0.0' called USCoreElements
 
 include CQMCommon version '5.2.000' called CQMCommon
-include CQMConcepts version '0.4.000' called CQMConcepts
+include CQMConcepts version '0.5.000' called CQMConcepts
 include fhir.onc."us-quality-core".USQualityCoreCommon version '0.5.0' called USQualityCoreCommon
 include SupplementalDataElements version '6.1.000' called SDE
 

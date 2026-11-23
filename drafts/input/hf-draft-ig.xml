@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal IG resource so the CQL language server loads the US Quality Core 0.5.0 stack for the
+  draft HF measure. Not for publication. Open the drafts/ folder as its own VS Code workspace.
+-->
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hf.draft"/>
+  <url value="http://example.org/ImplementationGuide/hf.draft"/>
+  <version value="0.0.1"/>
+  <name value="HFDraftMeasures"/>
+  <title value="Draft Heart Failure Measures (US Quality Core 0.5.0)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <packageId value="hf.draft"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="tx">
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.1.0"/>
+  </dependsOn>
+  <dependsOn id="cqluv">
+    <uri value="http://hl7.org/fhir/uv/cql/ImplementationGuide/hl7.fhir.uv.cql"/>
+    <packageId value="hl7.fhir.uv.cql"/>
+    <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="cqlus">
+    <uri value="http://hl7.org/fhir/us/cql/ImplementationGuide/hl7.fhir.us.cql"/>
+    <packageId value="hl7.fhir.us.cql"/>
+    <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="usqc">
+    <uri value="http://fhir.org/guides/onc/us-quality-core/ImplementationGuide/fhir.onc.us-quality-core"/>
+    <packageId value="fhir.onc.us-quality-core"/>
+    <version value="0.5.0"/>
+  </dependsOn>
+</ImplementationGuide>
