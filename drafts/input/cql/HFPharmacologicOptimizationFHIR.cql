@@ -4,10 +4,6 @@ Percentage of qualifying inpatient hospitalization episodes among patients aged 
 with heart failure and a current left ventricular ejection fraction (LVEF) <= 40% in which all four
 indicated categories of guideline-directed medical therapy (GDMT) are prescribed or continued at
 discharge.
-@comment: Episode-based (population basis Encounter): every population criterion returns the
-qualifying inpatient Encounters. Structure, header and conventions follow CMS0135 and CMS0144
-v1.0.002. Open items from the HF Implementation Guide and Decision Log are marked `TODO D-xx`;
-where the log has a recommendation, the draft follows it.
 */
 library HFPharmacologicOptimizationFHIR version '0.0.001'
 
@@ -84,9 +80,6 @@ define "Numerator":
 // missing GDMT category has its own medical or patient reason. A reason recorded against one
 // category does not cover another, and a reason not tied to a category (no medication class)
 // does not count.
-// TODO D-10: exceptions are limited to "Medical Reason" and "Patient Reason" for now; the
-// condition-based exceptions from CMS0135/CMS0144 (allergy, pregnancy, bradycardia, ...) and
-// MRA/SGLT2i contraindications are not included.
 define "Denominator Exceptions":
   "Denominator" QualifyingEncounter
     where not QualifyingEncounter.hasAllFourGDMTCategoriesAtDischarge ( )
