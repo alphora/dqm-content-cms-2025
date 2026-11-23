@@ -120,6 +120,16 @@ define "Heart Failure Inpatient Encounter with Current Reduced Ejection Fraction
       )
 
 /*
+@description: Returns the hospitalization interval for the given encounter: from the start of any emergency department
+visit ending 1 hour or less before admission, otherwise from admission, through discharge.
+@comment: Replaces CQMCommon 5.2.000 hospitalization(), which returns null when there is no prior ED visit:
+it is written as a query over the single source `TheEncounter.edVisit()`, and a query over a null source is null.
+Found by executing the draft against synthetic data (engine 5.5.0).
+*/
+define fluent function hospitalizationPeriod(encounter USQualityCore.Encounter):
+  Interval[Coalesce(start of encounter.edVisit ( ).period, start of encounter.period), end of encounter.period]
+
+/*
 @description: Returns true if heart failure is associated with the given hospitalization
 @comment: TODO D-05: "hospitalization for HF" is undecided (principal only / principal or secondary /
 any encounter diagnosis / condition active during the stay / present on admission). The draft
@@ -133,7 +143,7 @@ define fluent function hasHeartFailureDiagnosis(encounter USQualityCore.Encounte
           and HeartFailureDiagnosis.isVerified ( )
     )
     or exists ( [USQualityCore.ConditionProblemsHealthConcerns: "Heart Failure"] HeartFailureProblem
-        where HeartFailureProblem.prevalencePeriod ( ) overlaps day of encounter.hospitalization ( )
+        where HeartFailureProblem.prevalencePeriod ( ) overlaps day of encounter.hospitalizationPeriod ( )
           and HeartFailureProblem.isVerified ( )
     )
 
@@ -253,7 +263,7 @@ define fluent function isPrescribedOrContinuedAtDischarge(medications List<USQua
         and (
           ( ( Medication.isDischarge ( ) or Medication.isCommunity ( ) )
               and Medication.status in { 'active', 'completed' }
-              and Medication.authoredOn during day of encounter.hospitalization ( )
+              and Medication.authoredOn during day of encounter.hospitalizationPeriod ( )
           )
             or ( Medication.isCommunity ( )
                 and Medication.status = 'active'
@@ -305,7 +315,7 @@ what ties the reason to the missing category.
 */
 define fluent function hasMedicalOrPatientReasonDuring(notRequested List<USQualityCore.MedicationNotRequested>, encounter USQualityCore.Encounter):
   exists ( notRequested NotRequested
-      where NotRequested.authoredOn during day of encounter.hospitalization ( )
+      where NotRequested.authoredOn during day of encounter.hospitalizationPeriod ( )
         and ( NotRequested.reasonCode in "Medical Reason"
             or NotRequested.reasonCode in "Patient Reason"
         )

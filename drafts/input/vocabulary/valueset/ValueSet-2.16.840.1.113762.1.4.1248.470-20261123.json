@@ -1,0 +1,218 @@
+{
+ "resourceType": "ValueSet",
+ "id": "2.16.840.1.113762.1.4.1248.470-20261123",
+ "meta": {
+  "versionId": "32",
+  "lastUpdated": "2025-01-31T14:08:38.000-05:00",
+  "profile": [
+   "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-valueset-cqfm",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-valueset-cqfm"
+  ]
+ },
+ "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1248.470",
+ "identifier": [
+  {
+   "system": "urn:ietf:rfc:3986",
+   "value": "urn:oid:2.16.840.1.113762.1.4.1248.470"
+  }
+ ],
+ "version": "20261123",
+ "name": "AngiotensinIIReceptorBlocker",
+ "title": "Angiotensin II Receptor Blocker",
+ "status": "active",
+ "experimental": false,
+ "date": "2022-03-07T11:14:02-05:00",
+ "publisher": "Draft (local)",
+ "jurisdiction": [
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+     "valueCode": "unknown"
+    }
+   ]
+  }
+ ],
+ "purpose": "DRAFT test copy built from HF Value Set Directory_USQC_Draft for Smile.xlsx; not the VSAC expansion.",
+ "compose": {
+  "include": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "concept": [
+     {
+      "code": "153822",
+      "display": "candesartan cilexetil 4 MG Oral Tablet"
+     },
+     {
+      "code": "153823",
+      "display": "candesartan cilexetil 8 MG Oral Tablet"
+     },
+     {
+      "code": "577776",
+      "display": "candesartan cilexetil 16 MG Oral Tablet"
+     },
+     {
+      "code": "639536",
+      "display": "candesartan cilexetil 2 MG Oral Tablet"
+     },
+     {
+      "code": "639537",
+      "display": "candesartan cilexetil 32 MG Oral Tablet"
+     },
+     {
+      "code": "153077",
+      "display": "valsartan 40 MG Oral Capsule"
+     },
+     {
+      "code": "1996254",
+      "display": "valsartan 4 MG/ML Oral Solution"
+     },
+     {
+      "code": "199850",
+      "display": "valsartan 80 MG Oral Capsule"
+     },
+     {
+      "code": "199919",
+      "display": "valsartan 160 MG Oral Capsule"
+     },
+     {
+      "code": "349199",
+      "display": "valsartan 80 MG Oral Tablet"
+     },
+     {
+      "code": "349200",
+      "display": "valsartan 320 MG Oral Tablet"
+     },
+     {
+      "code": "349201",
+      "display": "valsartan 160 MG Oral Tablet"
+     },
+     {
+      "code": "349483",
+      "display": "valsartan 40 MG Oral Tablet"
+     },
+     {
+      "code": "2709039",
+      "display": "losartan potassium 10 MG/ML Oral Suspension"
+     },
+     {
+      "code": "979480",
+      "display": "losartan potassium 100 MG Oral Tablet"
+     },
+     {
+      "code": "979485",
+      "display": "losartan potassium 25 MG Oral Tablet"
+     },
+     {
+      "code": "979492",
+      "display": "losartan potassium 50 MG Oral Tablet"
+     }
+    ]
+   }
+  ]
+ },
+ "expansion": {
+  "identifier": "urn:uuid:draft-2.16.840.1.113762.1.4.1248.470",
+  "timestamp": "2025-08-28T16:56:55-04:00",
+  "total": 17,
+  "offset": 0,
+  "parameter": [
+   {
+    "name": "count",
+    "valueInteger": 1000
+   },
+   {
+    "name": "offset",
+    "valueInteger": 0
+   }
+  ],
+  "contains": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "153822",
+    "display": "candesartan cilexetil 4 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "153823",
+    "display": "candesartan cilexetil 8 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "577776",
+    "display": "candesartan cilexetil 16 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "639536",
+    "display": "candesartan cilexetil 2 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "639537",
+    "display": "candesartan cilexetil 32 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "153077",
+    "display": "valsartan 40 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1996254",
+    "display": "valsartan 4 MG/ML Oral Solution"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "199850",
+    "display": "valsartan 80 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "199919",
+    "display": "valsartan 160 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "349199",
+    "display": "valsartan 80 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "349200",
+    "display": "valsartan 320 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "349201",
+    "display": "valsartan 160 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "349483",
+    "display": "valsartan 40 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "2709039",
+    "display": "losartan potassium 10 MG/ML Oral Suspension"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "979480",
+    "display": "losartan potassium 100 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "979485",
+    "display": "losartan potassium 25 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "979492",
+    "display": "losartan potassium 50 MG Oral Tablet"
+   }
+  ]
+ }
+}

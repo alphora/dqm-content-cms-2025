@@ -1,0 +1,263 @@
+{
+ "resourceType": "ValueSet",
+ "id": "2.16.840.1.113762.1.4.1248.473-20261123",
+ "meta": {
+  "versionId": "32",
+  "lastUpdated": "2025-01-31T14:08:38.000-05:00",
+  "profile": [
+   "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-valueset-cqfm",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-valueset-cqfm"
+  ]
+ },
+ "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1248.473",
+ "identifier": [
+  {
+   "system": "urn:ietf:rfc:3986",
+   "value": "urn:oid:2.16.840.1.113762.1.4.1248.473"
+  }
+ ],
+ "version": "20261123",
+ "name": "BetaBlocker",
+ "title": "Beta Blocker",
+ "status": "active",
+ "experimental": false,
+ "date": "2022-03-07T11:14:02-05:00",
+ "publisher": "Draft (local)",
+ "jurisdiction": [
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+     "valueCode": "unknown"
+    }
+   ]
+  }
+ ],
+ "purpose": "DRAFT test copy built from HF Value Set Directory_USQC_Draft for Smile.xlsx; not the VSAC expansion.",
+ "compose": {
+  "include": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "concept": [
+     {
+      "code": "854901",
+      "display": "bisoprolol fumarate 10 MG Oral Tablet"
+     },
+     {
+      "code": "854905",
+      "display": "bisoprolol fumarate 5 MG Oral Tablet"
+     },
+     {
+      "code": "865154",
+      "display": "bisoprolol fumarate 1.25 MG Oral Tablet"
+     },
+     {
+      "code": "865155",
+      "display": "bisoprolol fumarate 2.5 MG Oral Tablet"
+     },
+     {
+      "code": "865157",
+      "display": "bisoprolol fumarate 3.75 MG Oral Tablet"
+     },
+     {
+      "code": "865159",
+      "display": "bisoprolol fumarate 7.5 MG Oral Tablet"
+     },
+     {
+      "code": "200031",
+      "display": "carvedilol 6.25 MG Oral Tablet"
+     },
+     {
+      "code": "200032",
+      "display": "carvedilol 12.5 MG Oral Tablet"
+     },
+     {
+      "code": "200033",
+      "display": "carvedilol 25 MG Oral Tablet"
+     },
+     {
+      "code": "686924",
+      "display": "carvedilol 3.125 MG Oral Tablet"
+     },
+     {
+      "code": "860510",
+      "display": "24 HR carvedilol phosphate 10 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "860516",
+      "display": "24 HR carvedilol phosphate 20 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "860522",
+      "display": "24 HR carvedilol phosphate 40 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "860532",
+      "display": "24 HR carvedilol phosphate 80 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "1999031",
+      "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "1999033",
+      "display": "24 HR metoprolol succinate 200 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "1999035",
+      "display": "24 HR metoprolol succinate 25 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "1999037",
+      "display": "24 HR metoprolol succinate 50 MG Extended Release Oral Capsule"
+     },
+     {
+      "code": "866412",
+      "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+     },
+     {
+      "code": "866419",
+      "display": "24 HR metoprolol succinate 200 MG Extended Release Oral Tablet"
+     },
+     {
+      "code": "866427",
+      "display": "24 HR metoprolol succinate 25 MG Extended Release Oral Tablet"
+     },
+     {
+      "code": "866436",
+      "display": "24 HR metoprolol succinate 50 MG Extended Release Oral Tablet"
+     }
+    ]
+   }
+  ]
+ },
+ "expansion": {
+  "identifier": "urn:uuid:draft-2.16.840.1.113762.1.4.1248.473",
+  "timestamp": "2025-08-28T16:56:55-04:00",
+  "total": 22,
+  "offset": 0,
+  "parameter": [
+   {
+    "name": "count",
+    "valueInteger": 1000
+   },
+   {
+    "name": "offset",
+    "valueInteger": 0
+   }
+  ],
+  "contains": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "854901",
+    "display": "bisoprolol fumarate 10 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "854905",
+    "display": "bisoprolol fumarate 5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "865154",
+    "display": "bisoprolol fumarate 1.25 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "865155",
+    "display": "bisoprolol fumarate 2.5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "865157",
+    "display": "bisoprolol fumarate 3.75 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "865159",
+    "display": "bisoprolol fumarate 7.5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "200031",
+    "display": "carvedilol 6.25 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "200032",
+    "display": "carvedilol 12.5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "200033",
+    "display": "carvedilol 25 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "686924",
+    "display": "carvedilol 3.125 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "860510",
+    "display": "24 HR carvedilol phosphate 10 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "860516",
+    "display": "24 HR carvedilol phosphate 20 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "860522",
+    "display": "24 HR carvedilol phosphate 40 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "860532",
+    "display": "24 HR carvedilol phosphate 80 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1999031",
+    "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1999033",
+    "display": "24 HR metoprolol succinate 200 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1999035",
+    "display": "24 HR metoprolol succinate 25 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1999037",
+    "display": "24 HR metoprolol succinate 50 MG Extended Release Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "866412",
+    "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "866419",
+    "display": "24 HR metoprolol succinate 200 MG Extended Release Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "866427",
+    "display": "24 HR metoprolol succinate 25 MG Extended Release Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "866436",
+    "display": "24 HR metoprolol succinate 50 MG Extended Release Oral Tablet"
+   }
+  ]
+ }
+}

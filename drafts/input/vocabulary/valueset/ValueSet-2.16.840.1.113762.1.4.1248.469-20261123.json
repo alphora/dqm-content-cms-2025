@@ -1,0 +1,299 @@
+{
+ "resourceType": "ValueSet",
+ "id": "2.16.840.1.113762.1.4.1248.469-20261123",
+ "meta": {
+  "versionId": "32",
+  "lastUpdated": "2025-01-31T14:08:38.000-05:00",
+  "profile": [
+   "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-valueset-cqfm",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-valueset-cqfm"
+  ]
+ },
+ "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1248.469",
+ "identifier": [
+  {
+   "system": "urn:ietf:rfc:3986",
+   "value": "urn:oid:2.16.840.1.113762.1.4.1248.469"
+  }
+ ],
+ "version": "20261123",
+ "name": "AngiotensinConvertingEnzymeInhibitor",
+ "title": "Angiotensin Converting Enzyme Inhibitor",
+ "status": "active",
+ "experimental": false,
+ "date": "2022-03-07T11:14:02-05:00",
+ "publisher": "Draft (local)",
+ "jurisdiction": [
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+     "valueCode": "unknown"
+    }
+   ]
+  }
+ ],
+ "purpose": "DRAFT test copy built from HF Value Set Directory_USQC_Draft for Smile.xlsx; not the VSAC expansion.",
+ "compose": {
+  "include": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "concept": [
+     {
+      "code": "308962",
+      "display": "captopril 100 MG Oral Tablet"
+     },
+     {
+      "code": "308963",
+      "display": "captopril 12.5 MG Oral Tablet"
+     },
+     {
+      "code": "317173",
+      "display": "captopril 25 MG Oral Tablet"
+     },
+     {
+      "code": "308964",
+      "display": "captopril 50 MG Oral Tablet"
+     },
+     {
+      "code": "1435624",
+      "display": "enalapril maleate 1 MG/ML Oral Solution"
+     },
+     {
+      "code": "858817",
+      "display": "enalapril maleate 10 MG Oral Tablet"
+     },
+     {
+      "code": "858804",
+      "display": "enalapril maleate 2.5 MG Oral Tablet"
+     },
+     {
+      "code": "858810",
+      "display": "enalapril maleate 20 MG Oral Tablet"
+     },
+     {
+      "code": "858813",
+      "display": "enalapril maleate 5 MG Oral Tablet"
+     },
+     {
+      "code": "1806884",
+      "display": "lisinopril 1 MG/ML Oral Solution"
+     },
+     {
+      "code": "314076",
+      "display": "lisinopril 10 MG Oral Tablet"
+     },
+     {
+      "code": "311353",
+      "display": "lisinopril 2.5 MG Oral Tablet"
+     },
+     {
+      "code": "314077",
+      "display": "lisinopril 20 MG Oral Tablet"
+     },
+     {
+      "code": "205326",
+      "display": "lisinopril 30 MG Oral Tablet"
+     },
+     {
+      "code": "197884",
+      "display": "lisinopril 40 MG Oral Tablet"
+     },
+     {
+      "code": "311354",
+      "display": "lisinopril 5 MG Oral Tablet"
+     },
+     {
+      "code": "2727324",
+      "display": "ramipril 1 MG/ML Oral Solution"
+     },
+     {
+      "code": "845488",
+      "display": "ramipril 1.25 MG Oral Capsule"
+     },
+     {
+      "code": "261962",
+      "display": "ramipril 10 MG Oral Capsule"
+     },
+     {
+      "code": "401968",
+      "display": "ramipril 10 MG Oral Tablet"
+     },
+     {
+      "code": "198188",
+      "display": "ramipril 2.5 MG Oral Capsule"
+     },
+     {
+      "code": "198189",
+      "display": "ramipril 5 MG Oral Capsule"
+     },
+     {
+      "code": "199622",
+      "display": "trandolapril 0.5 MG Oral Capsule"
+     },
+     {
+      "code": "199353",
+      "display": "trandolapril 1 MG Oral Tablet"
+     },
+     {
+      "code": "199351",
+      "display": "trandolapril 2 MG Oral Tablet"
+     },
+     {
+      "code": "199352",
+      "display": "trandolapril 4 MG Oral Tablet"
+     }
+    ]
+   }
+  ]
+ },
+ "expansion": {
+  "identifier": "urn:uuid:draft-2.16.840.1.113762.1.4.1248.469",
+  "timestamp": "2025-08-28T16:56:55-04:00",
+  "total": 26,
+  "offset": 0,
+  "parameter": [
+   {
+    "name": "count",
+    "valueInteger": 1000
+   },
+   {
+    "name": "offset",
+    "valueInteger": 0
+   }
+  ],
+  "contains": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "308962",
+    "display": "captopril 100 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "308963",
+    "display": "captopril 12.5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "317173",
+    "display": "captopril 25 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "308964",
+    "display": "captopril 50 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1435624",
+    "display": "enalapril maleate 1 MG/ML Oral Solution"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "858817",
+    "display": "enalapril maleate 10 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "858804",
+    "display": "enalapril maleate 2.5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "858810",
+    "display": "enalapril maleate 20 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "858813",
+    "display": "enalapril maleate 5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1806884",
+    "display": "lisinopril 1 MG/ML Oral Solution"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "314076",
+    "display": "lisinopril 10 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "311353",
+    "display": "lisinopril 2.5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "314077",
+    "display": "lisinopril 20 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "205326",
+    "display": "lisinopril 30 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "197884",
+    "display": "lisinopril 40 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "311354",
+    "display": "lisinopril 5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "2727324",
+    "display": "ramipril 1 MG/ML Oral Solution"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "845488",
+    "display": "ramipril 1.25 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "261962",
+    "display": "ramipril 10 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "401968",
+    "display": "ramipril 10 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "198188",
+    "display": "ramipril 2.5 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "198189",
+    "display": "ramipril 5 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "199622",
+    "display": "trandolapril 0.5 MG Oral Capsule"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "199353",
+    "display": "trandolapril 1 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "199351",
+    "display": "trandolapril 2 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "199352",
+    "display": "trandolapril 4 MG Oral Tablet"
+   }
+  ]
+ }
+}

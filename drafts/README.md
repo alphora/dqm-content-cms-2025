@@ -21,6 +21,15 @@ The packages must be in the FHIR package cache (`~/.fhir/packages`). Download th
 `https://packages.fhir.org/fhir.onc.us-quality-core/0.5.0` and `https://packages.fhir.org/hl7.fhir.us.cql/2.0.0`
 if they're missing. After changing packages or `ig.ini`, reload the VS Code window.
 
+## Value sets
+
+`input/vocabulary/valueset/` holds copies of the repo's VSAC expansions the draft uses, plus six **draft** GDMT
+value sets (`2.16.840.1.113762.1.4.1248.469`-`.475`, version `20261123`) built from the codes on the tabs of
+*HF Value Set Directory_USQC_Draft for Smile.xlsx*. They aren't VSAC expansions; replace them when VSAC publishes.
+
+The language server reads value sets from the **workspace folder's** `input/vocabulary/valueset`, so these are
+only used when `drafts/` is opened as its own workspace.
+
 ## Contents
 
 - `input/cql/HFPharmacologicOptimizationFHIR.cql`: Heart Failure: Pharmacologic Optimization (Hospitalist), draft.

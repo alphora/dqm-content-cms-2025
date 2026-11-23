@@ -1,0 +1,110 @@
+{
+ "resourceType": "ValueSet",
+ "id": "2.16.840.1.113762.1.4.1248.472-20261123",
+ "meta": {
+  "versionId": "32",
+  "lastUpdated": "2025-01-31T14:08:38.000-05:00",
+  "profile": [
+   "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-valueset-cqfm",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-valueset-cqfm"
+  ]
+ },
+ "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1248.472",
+ "identifier": [
+  {
+   "system": "urn:ietf:rfc:3986",
+   "value": "urn:oid:2.16.840.1.113762.1.4.1248.472"
+  }
+ ],
+ "version": "20261123",
+ "name": "AngiotensinReceptorNeprilysinInhibitor",
+ "title": "Angiotensin Receptor Neprilysin Inhibitor",
+ "status": "active",
+ "experimental": false,
+ "date": "2022-03-07T11:14:02-05:00",
+ "publisher": "Draft (local)",
+ "jurisdiction": [
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+     "valueCode": "unknown"
+    }
+   ]
+  }
+ ],
+ "purpose": "DRAFT test copy built from HF Value Set Directory_USQC_Draft for Smile.xlsx; not the VSAC expansion.",
+ "compose": {
+  "include": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "concept": [
+     {
+      "code": "1656340",
+      "display": "sacubitril 24 MG / valsartan 26 MG Oral Tablet"
+     },
+     {
+      "code": "1656349",
+      "display": "sacubitril 49 MG / valsartan 51 MG Oral Tablet"
+     },
+     {
+      "code": "1656354",
+      "display": "sacubitril 97 MG / valsartan 103 MG Oral Tablet"
+     },
+     {
+      "code": "2679793",
+      "display": "sacubitril 15 MG / valsartan 16 MG Oral Pellet"
+     },
+     {
+      "code": "2679800",
+      "display": "sacubitril 6 MG / valsartan 6 MG Oral Pellet"
+     }
+    ]
+   }
+  ]
+ },
+ "expansion": {
+  "identifier": "urn:uuid:draft-2.16.840.1.113762.1.4.1248.472",
+  "timestamp": "2025-08-28T16:56:55-04:00",
+  "total": 5,
+  "offset": 0,
+  "parameter": [
+   {
+    "name": "count",
+    "valueInteger": 1000
+   },
+   {
+    "name": "offset",
+    "valueInteger": 0
+   }
+  ],
+  "contains": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1656340",
+    "display": "sacubitril 24 MG / valsartan 26 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1656349",
+    "display": "sacubitril 49 MG / valsartan 51 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1656354",
+    "display": "sacubitril 97 MG / valsartan 103 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "2679793",
+    "display": "sacubitril 15 MG / valsartan 16 MG Oral Pellet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "2679800",
+    "display": "sacubitril 6 MG / valsartan 6 MG Oral Pellet"
+   }
+  ]
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "resourceType": "ValueSet",
+ "id": "2.16.840.1.113762.1.4.1248.475-20261123",
+ "meta": {
+  "versionId": "32",
+  "lastUpdated": "2025-01-31T14:08:38.000-05:00",
+  "profile": [
+   "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-valueset-cqfm",
+   "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-valueset-cqfm"
+  ]
+ },
+ "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1248.475",
+ "identifier": [
+  {
+   "system": "urn:ietf:rfc:3986",
+   "value": "urn:oid:2.16.840.1.113762.1.4.1248.475"
+  }
+ ],
+ "version": "20261123",
+ "name": "SGLT2InhibitorforHeartFailure",
+ "title": "SGLT2 Inhibitor for Heart Failure",
+ "status": "active",
+ "experimental": false,
+ "date": "2022-03-07T11:14:02-05:00",
+ "publisher": "Draft (local)",
+ "jurisdiction": [
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+     "valueCode": "unknown"
+    }
+   ]
+  }
+ ],
+ "purpose": "DRAFT test copy built from HF Value Set Directory_USQC_Draft for Smile.xlsx; not the VSAC expansion.",
+ "compose": {
+  "include": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "concept": [
+     {
+      "code": "1488569",
+      "display": "dapagliflozin 10 MG Oral Tablet"
+     },
+     {
+      "code": "1488574",
+      "display": "dapagliflozin 5 MG Oral Tablet"
+     },
+     {
+      "code": "1545658",
+      "display": "empagliflozin 10 MG Oral Tablet"
+     },
+     {
+      "code": "1545666",
+      "display": "empagliflozin 25 MG Oral Tablet"
+     },
+     {
+      "code": "2638683",
+      "display": "sotagliflozin 200 MG Oral Tablet"
+     },
+     {
+      "code": "2638691",
+      "display": "sotagliflozin 400 MG Oral Tablet"
+     }
+    ]
+   }
+  ]
+ },
+ "expansion": {
+  "identifier": "urn:uuid:draft-2.16.840.1.113762.1.4.1248.475",
+  "timestamp": "2025-08-28T16:56:55-04:00",
+  "total": 6,
+  "offset": 0,
+  "parameter": [
+   {
+    "name": "count",
+    "valueInteger": 1000
+   },
+   {
+    "name": "offset",
+    "valueInteger": 0
+   }
+  ],
+  "contains": [
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1488569",
+    "display": "dapagliflozin 10 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1488574",
+    "display": "dapagliflozin 5 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1545658",
+    "display": "empagliflozin 10 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "1545666",
+    "display": "empagliflozin 25 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "2638683",
+    "display": "sotagliflozin 200 MG Oral Tablet"
+   },
+   {
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code": "2638691",
+    "display": "sotagliflozin 400 MG Oral Tablet"
+   }
+  ]
+ }
+}
