@@ -1,0 +1,150 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0f822ba2-b413-53fa-af18-b654b59d6c70",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Parameters",
+      "id": "5b52e7da-4238-5af1-a902-710202b30431-parameters",
+      "parameter": [
+        {
+          "name": "subject",
+          "valueString": "5b52e7da-4238-5af1-a902-710202b30431"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+      "valueReference": {
+        "reference": "#5b52e7da-4238-5af1-a902-710202b30431-parameters"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+      "valueMarkdown": "NumerPass: In denominator; ARNI, beta blocker, MRA and SGLT2i all ordered at discharge."
+    }
+  ],
+  "modifierExtension": [
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+      "valueBoolean": true
+    }
+  ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/HFPharmacologicOptimizationFHIR",
+  "period": {
+    "start": "2028-01-01",
+    "end": "2028-12-31"
+  },
+  "group": [
+    {
+      "id": "Group_1",
+      "population": [
+        {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "DenominatorException_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exception",
+                "display": "Denominator Exception"
+              }
+            ]
+          },
+          "count": 0
+        }
+      ],
+      "measureScore": {
+        "value": 1.0
+      }
+    }
+  ],
+  "evaluatedResource": [
+    {
+      "reference": "Patient/5b52e7da-4238-5af1-a902-710202b30431"
+    },
+    {
+      "reference": "Practitioner/aa992bb3-7b08-5466-a222-b6ed9bf006e5"
+    },
+    {
+      "reference": "Encounter/deccf7bb-6501-5ad9-ac36-5f2b5bdb46e1"
+    },
+    {
+      "reference": "Condition/09f27104-cbcc-53ca-aedd-229c792b7794"
+    },
+    {
+      "reference": "Observation/6fc0b9df-a428-5036-8f5e-20c6b3381d47"
+    },
+    {
+      "reference": "MedicationRequest/083122f9-789b-568a-9205-111ff1c8b35c"
+    },
+    {
+      "reference": "MedicationRequest/a7e460de-a3e4-599e-b909-94a6a3a39bfb"
+    },
+    {
+      "reference": "MedicationRequest/4fe633e4-2c70-54df-a98f-2f2fcd45cf1a"
+    },
+    {
+      "reference": "MedicationRequest/bc4b16eb-62e2-5e5b-8da1-d963f602ef6b"
+    }
+  ]
+}

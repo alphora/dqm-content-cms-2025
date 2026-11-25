@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "38505bf0-bf0b-5c4d-8805-607fbd2da5c1",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/hf-draft-test",
+      "value": "denex-pass"
+    }
+  ],
+  "name": [
+    {
+      "family": "HFPharma",
+      "given": [
+        "DenexPass"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1960-05-01"
+}

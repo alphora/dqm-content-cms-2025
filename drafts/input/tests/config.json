@@ -1,0 +1,12 @@
+{
+  "testCasesToExclude": [],
+  "resultFormat": "individual",
+  "flatResultsInSubfolder": false,
+  "parameters": [
+    {
+      "name": "Measurement Period",
+      "type": "Interval<DateTime>",
+      "value": "Interval[@2028-01-01T00:00:00.000Z, @2029-01-01T00:00:00.000Z)"
+    }
+  ]
+}

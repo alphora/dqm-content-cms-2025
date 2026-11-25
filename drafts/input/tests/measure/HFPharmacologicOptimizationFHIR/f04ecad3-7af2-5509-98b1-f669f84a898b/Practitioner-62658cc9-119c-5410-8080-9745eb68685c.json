@@ -1,0 +1,23 @@
+{
+  "resourceType": "Practitioner",
+  "id": "62658cc9-119c-5410-8080-9745eb68685c",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1234567893"
+    }
+  ],
+  "name": [
+    {
+      "family": "Hospitalist",
+      "given": [
+        "Test"
+      ]
+    }
+  ]
+}

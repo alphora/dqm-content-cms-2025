@@ -1,0 +1,39 @@
+{
+  "resourceType": "Observation",
+  "id": "42faf8d8-dcd4-51e2-b99a-b09f2843093c",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "10230-1",
+        "display": "Left ventricular Ejection fraction"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/40f9a6b9-c6de-5d34-a534-041e1af86187"
+  },
+  "effectiveDateTime": "2028-03-02T10:00:00Z",
+  "valueQuantity": {
+    "value": 30,
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%"
+  }
+}

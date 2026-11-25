@@ -1,0 +1,150 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "9381bcf9-1bd3-578b-87b6-63ad14ce4ae5",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Parameters",
+      "id": "98f78269-5db0-59dc-abac-044ae00c0d50-parameters",
+      "parameter": [
+        {
+          "name": "subject",
+          "valueString": "98f78269-5db0-59dc-abac-044ae00c0d50"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+      "valueReference": {
+        "reference": "#98f78269-5db0-59dc-abac-044ae00c0d50-parameters"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+      "valueMarkdown": "DenexcepPass: In denominator; ARNI, beta blocker and SGLT2i at discharge; MRA not ordered with a medical reason (procedure contraindicated)."
+    }
+  ],
+  "modifierExtension": [
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+      "valueBoolean": true
+    }
+  ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/HFPharmacologicOptimizationFHIR",
+  "period": {
+    "start": "2028-01-01",
+    "end": "2028-12-31"
+  },
+  "group": [
+    {
+      "id": "Group_1",
+      "population": [
+        {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "DenominatorException_1",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exception",
+                "display": "Denominator Exception"
+              }
+            ]
+          },
+          "count": 1
+        }
+      ],
+      "measureScore": {
+        "value": 0.0
+      }
+    }
+  ],
+  "evaluatedResource": [
+    {
+      "reference": "Patient/98f78269-5db0-59dc-abac-044ae00c0d50"
+    },
+    {
+      "reference": "Practitioner/7f67ce98-82fc-5f8c-afe3-472d68a234d2"
+    },
+    {
+      "reference": "Encounter/ad18079a-fa42-5290-9567-772e0164a517"
+    },
+    {
+      "reference": "Condition/045cc0ca-2e31-5617-bf5f-291d71a5b179"
+    },
+    {
+      "reference": "Observation/10d5fd80-a7ac-52ad-b15c-72485344882f"
+    },
+    {
+      "reference": "MedicationRequest/f11ade64-9451-5509-980a-20c7f8387bb3"
+    },
+    {
+      "reference": "MedicationRequest/2b81ea4a-b967-573e-90ae-a50664c988e8"
+    },
+    {
+      "reference": "MedicationRequest/6f54a582-84ec-5b6f-af29-a571fdda92f5"
+    },
+    {
+      "reference": "MedicationRequest/68d60e83-3945-5b9c-a830-3a8a68cabd4e"
+    }
+  ]
+}

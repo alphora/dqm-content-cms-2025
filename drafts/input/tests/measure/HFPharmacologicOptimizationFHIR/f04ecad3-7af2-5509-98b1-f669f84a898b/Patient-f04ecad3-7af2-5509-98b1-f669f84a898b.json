@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "f04ecad3-7af2-5509-98b1-f669f84a898b",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/hf-draft-test",
+      "value": "ip-fail"
+    }
+  ],
+  "name": [
+    {
+      "family": "HFPharma",
+      "given": [
+        "IPFail"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1960-05-01"
+}

@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "7d66aaff-5e02-5bf4-861c-b38ac585b617",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/hf-draft-test",
+      "value": "denom-pass"
+    }
+  ],
+  "name": [
+    {
+      "family": "HFPharma",
+      "given": [
+        "DenomPass"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1960-05-01"
+}

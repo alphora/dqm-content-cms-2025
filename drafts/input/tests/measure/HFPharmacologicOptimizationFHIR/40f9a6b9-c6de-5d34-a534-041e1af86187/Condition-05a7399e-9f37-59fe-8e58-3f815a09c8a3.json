@@ -1,0 +1,51 @@
+{
+  "resourceType": "Condition",
+  "id": "05a7399e-9f37-59fe-8e58-3f815a09c8a3",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "10091002",
+        "display": "High output heart failure (disorder)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/40f9a6b9-c6de-5d34-a534-041e1af86187"
+  },
+  "encounter": {
+    "reference": "Encounter/da1cb804-4764-56e9-ab04-46852b0071f4"
+  },
+  "onsetDateTime": "2028-03-01T09:00:00Z"
+}

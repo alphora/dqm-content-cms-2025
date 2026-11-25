@@ -4,6 +4,33 @@ Records actual CQL, FHIR resource, valueset, and similar content changes. An
 entry may cite the `I-XX` issue it resolves or relates to when one is known,
 but this is not required — not every change traces back to a tracked issue.
 
+## Add pass/fail test cases for the draft HF Pharmacologic Optimization measure
+
+**Problem:** the draft `HFPharmacologicOptimizationFHIR` (in `drafts/`) had no test cases; it had only been
+checked against three throwaway smoke-test patients.
+
+**Fix:** added ten test cases under `drafts/input/tests/measure/HFPharmacologicOptimizationFHIR/`, a pass and a
+fail for each population, plus `drafts/input/tests/config.json` (Measurement Period 2028) and the generator
+`drafts/scripts/generate_hf_test_cases.py`. All ten cases share one inpatient stay (2028-03-01 to 2028-03-05):
+
+| Case | Data | IP | DENOM | DENEX | NUMER | DENEXCEP |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPPass | HF encounter diagnosis, LVEF 30%, no GDMT | 1 | 1 | 0 | 0 | 0 |
+| IPFail | only LVEF is 50% | 0 | 0 | 0 | 0 | 0 |
+| DenomPass | no LVEF; moderate LVSD on the problem list (D-04) | 1 | 1 | 0 | 0 | 0 |
+| DenomFail | age 17 at discharge (D-02) | 0 | 0 | 0 | 0 | 0 |
+| DenexPass | LVAD placement 2027, before discharge | 1 | 1 | 1 | 0 | 0 |
+| DenexFail | LVAD placement 2028-06-01, after discharge (D-08) | 1 | 1 | 0 | 0 | 0 |
+| NumerPass | ARNI, beta blocker, MRA, SGLT2i at discharge | 1 | 1 | 0 | 1 | 0 |
+| NumerFail | SGLT2i missing, no reason | 1 | 1 | 0 | 0 | 0 |
+| DenexcepPass | MRA not ordered with a medical reason; other three ordered | 1 | 1 | 0 | 0 | 1 |
+| DenexcepFail | MRA not ordered with a reason, SGLT2i missing with no reason (D-07) | 1 | 1 | 0 | 0 | 0 |
+
+All ten match their expected counts on the CQL engine. Several cases encode open Decision Log items
+(D-02, D-04, D-07, D-08); update them if AIR decides otherwise.
+
+**Measures Affected:** HFPharmacologicOptimizationFHIR (draft)
+
 ## Reword the I-61 comments in CMS108 and CMS190
 
 **Problem:** the comment above `LowRiskDatetime: INRLabTest.issued.ToDateTime()` in `"Low Risk

@@ -1,0 +1,40 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "3be18a9a-e471-52db-be37-375f3a105904",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "854905",
+        "display": "bisoprolol fumarate 5 MG Oral Tablet"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/40f9a6b9-c6de-5d34-a534-041e1af86187"
+  },
+  "encounter": {
+    "reference": "Encounter/da1cb804-4764-56e9-ab04-46852b0071f4"
+  },
+  "authoredOn": "2028-03-05T10:00:00Z",
+  "requester": {
+    "reference": "Practitioner/449b4a0f-95d4-5e0d-bee0-19d08791df10"
+  }
+}

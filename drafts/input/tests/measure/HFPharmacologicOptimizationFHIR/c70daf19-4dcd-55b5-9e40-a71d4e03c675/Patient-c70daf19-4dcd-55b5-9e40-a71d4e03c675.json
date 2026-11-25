@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "c70daf19-4dcd-55b5-9e40-a71d4e03c675",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/hf-draft-test",
+      "value": "denom-fail"
+    }
+  ],
+  "name": [
+    {
+      "family": "HFPharma",
+      "given": [
+        "DenomFail"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "2010-06-01"
+}

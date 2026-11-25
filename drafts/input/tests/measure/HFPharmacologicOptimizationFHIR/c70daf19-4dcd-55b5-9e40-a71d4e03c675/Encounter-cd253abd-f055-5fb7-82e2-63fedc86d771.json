@@ -1,0 +1,33 @@
+{
+  "resourceType": "Encounter",
+  "id": "cd253abd-f055-5fb7-82e2-63fedc86d771",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+    ]
+  },
+  "status": "finished",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "IMP",
+    "display": "inpatient encounter"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "32485007",
+          "display": "Hospital admission (procedure)"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/c70daf19-4dcd-55b5-9e40-a71d4e03c675"
+  },
+  "period": {
+    "start": "2028-03-01T08:00:00Z",
+    "end": "2028-03-05T12:00:00Z"
+  }
+}

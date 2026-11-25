@@ -1,0 +1,52 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "5a0e7626-66fc-5cce-bd63-3de5fd4ed1d8",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested"
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "doNotPerform": true,
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "104230",
+        "display": "spironolactone 1 MG/ML Oral Suspension"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/114a91a3-db53-5d08-99e1-0923e40cfe52"
+  },
+  "encounter": {
+    "reference": "Encounter/ab487d74-e8ac-58c0-a3a3-4974c29af027"
+  },
+  "authoredOn": "2028-03-05T10:00:00Z",
+  "requester": {
+    "reference": "Practitioner/bda6852c-d8aa-510d-84cb-7bab0fc47d3f"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "183932001",
+          "display": "Procedure contraindicated (situation)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "resourceType": "Procedure",
+  "id": "0e692bdb-c66f-546c-822e-7cf73463a99f",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "232967006",
+        "display": "Implantation of left cardiac ventricular assist device (procedure)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/9d7ab2a4-66cc-5153-bc40-b2c1cc072476"
+  },
+  "performedPeriod": {
+    "start": "2028-06-01T10:00:00Z",
+    "end": "2028-06-01T10:00:00Z"
+  }
+}
