@@ -1,0 +1,40 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "7da72740-908d-50a3-b528-35177d373446",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "discharge"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1656340",
+        "display": "sacubitril 24 MG / valsartan 26 MG Oral Tablet"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/ccbdff8d-bcc7-5b65-b5a8-cab86dac83c9"
+  },
+  "encounter": {
+    "reference": "Encounter/981e2ef6-4614-5c87-be47-d7009049e347"
+  },
+  "authoredOn": "2028-03-05T10:00:00Z",
+  "requester": {
+    "reference": "Practitioner/48abd422-81ca-50d2-b6eb-8b98df117d8a"
+  }
+}

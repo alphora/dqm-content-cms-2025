@@ -25,6 +25,7 @@ MEDS = {
     "bb": ("854905", "bisoprolol fumarate 5 MG Oral Tablet"),
     "mra": ("104230", "spironolactone 1 MG/ML Oral Suspension"),
     "sglt2": ("1488569", "dapagliflozin 10 MG Oral Tablet"),
+    "mra-tab": ("313096", "spironolactone 25 MG Oral Tablet"),
 }
 
 
@@ -145,6 +146,33 @@ class Case:
             })
         return self
 
+    def home_med(self, k, start, days):
+        """Active community (home) order, 1 tablet daily, `days` supply from `start`, no refills."""
+        code, display = MEDS[k]
+        return self.add({
+            "resourceType": "MedicationRequest", "id": uid(self.slug, "home-med", k),
+            "meta": {"profile": [USQC + "medicationrequest"]},
+            "status": "active", "intent": "order",
+            "category": [cc("http://terminology.hl7.org/CodeSystem/medicationrequest-category", "community")],
+            "medicationCodeableConcept": cc(RX, code, display),
+            "subject": ref("Patient", self.pid),
+            "authoredOn": start,
+            "requester": ref("Practitioner", self.prac_id),
+            "dosageInstruction": [{
+                "timing": {"repeat": {"frequency": 1, "period": 1, "periodUnit": "d"}},
+                "doseAndRate": [{"doseQuantity": {"value": 1, "unit": "tablet",
+                                                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                                                  "code": "TAB"}}],
+            }],
+            "dispenseRequest": {
+                "numberOfRepeatsAllowed": 0,
+                "quantity": {"value": days, "unit": "tablet",
+                             "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm", "code": "TAB"},
+                "expectedSupplyDuration": {"value": days, "unit": "days", "system": "http://unitsofmeasure.org",
+                                           "code": "d"},
+            },
+        })
+
     def not_requested(self, k, reason=("183932001", "Procedure contraindicated (situation)")):
         code, display = MEDS[k]
         return self.add({
@@ -245,6 +273,14 @@ CASES = [
          "with a medical reason, but SGLT2i also missing with no reason (D-07: every missing category needs "
          "its own reason).", IN_DENOM).hf_diagnosis().ejection_fraction(30)
          .discharge_meds("raas", "bb").not_requested("mra"),
+    Case("continued-pass", "ContinuedPass", "In denominator; ARNI, beta blocker and SGLT2i ordered at discharge; "
+         "MRA continued from an active home order with a 30-day supply from 2028-02-20, which covers the "
+         "2028-03-05 discharge.", exp(1, 1, numer=1)).hf_diagnosis().ejection_fraction(30)
+         .discharge_meds("raas", "bb", "sglt2").home_med("mra-tab", "2028-02-20T09:00:00Z", 30),
+    Case("continued-fail", "ContinuedFail", "Same as ContinuedPass but the active home MRA order's 30-day supply "
+         "started 2027-12-01 and ran out 2027-12-30, before admission: not continued at discharge.",
+         IN_DENOM).hf_diagnosis().ejection_fraction(30)
+         .discharge_meds("raas", "bb", "sglt2").home_med("mra-tab", "2027-12-01T09:00:00Z", 30),
 ]
 
 

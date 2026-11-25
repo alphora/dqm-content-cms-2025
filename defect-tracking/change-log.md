@@ -4,6 +4,24 @@ Records actual CQL, FHIR resource, valueset, and similar content changes. An
 entry may cite the `I-XX` issue it resolves or relates to when one is known,
 but this is not required — not every change traces back to a tracked issue.
 
+## Require a home GDMT order's supply to cover discharge in the draft HF Pharma measure
+
+**Problem:** in `isPrescribedOrContinuedAtDischarge()` the "continued" branch accepted any active community
+(home) MedicationRequest authored on or before discharge, ignoring how long its supply lasted. A 30-day home
+prescription written months before admission still counted as continued at discharge. Raised in the draft review.
+
+**Fix:** the continued branch now requires `CMD.medicationRequestPeriod()` (CumulativeMedicationDuration 2.0.0,
+the same function CMS136 uses) to include the discharge date. The original condition is kept commented out above
+the replacement. Discharge orders written during the hospitalization are unchanged. Two choices are flagged for
+AIR under D-06: "includes the discharge date" is stricter than "overlaps the hospitalization", and a home order
+with no days supply, quantity/dose or bounds end has a null period and does not count.
+
+Added two test cases: ContinuedPass (home MRA, 30-day supply from 2028-02-20, covers the 2028-03-05 discharge:
+Numerator 1) and ContinuedFail (same order with supply from 2027-12-01, ran out before admission: Numerator 0;
+counted as Numerator 1 under the old logic). All 12 cases match their expected counts.
+
+**Measures Affected:** HFPharmacologicOptimizationFHIR (draft)
+
 ## Add pass/fail test cases for the draft HF Pharmacologic Optimization measure
 
 **Problem:** the draft `HFPharmacologicOptimizationFHIR` (in `drafts/`) had no test cases; it had only been

@@ -15,6 +15,7 @@ include hl7.fhir.uv.cql.FHIRHelpers version '4.0.1' called FHIRHelpers
 include hl7.fhir.uv.cql.FHIRCommon version '2.0.0' called FHIRCommon
 include hl7.fhir.us.cql.USCoreCommon version '2.0.0' called USCoreCommon
 include hl7.fhir.us.cql.USCoreElements version '2.0.0' called USCoreElements
+include hl7.fhir.us.cql.CumulativeMedicationDuration version '2.0.0' called CMD
 
 include CQMCommon version '5.2.000' called CQMCommon
 include CQMConcepts version '0.5.000' called CQMConcepts
@@ -254,8 +255,15 @@ define "SGLT2 Inhibitor Medication Request":
 @description: Returns true if any of the given medication requests is prescribed or continued at discharge from the given hospitalization
 @comment: TODO D-06 (recommended: "status active at discharge, or authored during the episode"). The draft counts:
 - prescribed at discharge: an order with a discharge or community category, authored during the hospitalization; or
-- continued: an active community (home) medication order authored on or before discharge.
+- continued: an active community (home) medication order whose supply period (CMD medicationRequestPeriod(),
+  from authoredOn or dosage bounds through days supply or quantity / daily dose, times refills) includes the
+  discharge date.
 Medication reconciliation representation and encounter linkage (Implementation Guide row 24) are still open.
+Draft review 2026-11-25: the continued branch previously accepted any active home order authored on or before
+discharge, regardless of how long its supply lasted. It now requires the supply to cover the discharge date.
+"Includes the discharge date" is stricter than "overlaps the hospitalization": a supply that ran out mid-stay
+overlaps the stay but is not continued at discharge. A home order with no days supply, quantity/dose or bounds
+end has a null period and does not count. TODO D-06: confirm both choices with AIR.
 */
 define fluent function isPrescribedOrContinuedAtDischarge(medications List<USQualityCore.MedicationRequest>, encounter USQualityCore.Encounter):
   exists ( medications Medication
@@ -267,7 +275,9 @@ define fluent function isPrescribedOrContinuedAtDischarge(medications List<USQua
           )
             or ( Medication.isCommunity ( )
                 and Medication.status = 'active'
-                and Medication.authoredOn on or before day of end of encounter.period
+                // original
+                // and Medication.authoredOn on or before day of end of encounter.period
+                and Medication.medicationRequestPeriod ( ) includes date from end of encounter.period
             )
         )
   )

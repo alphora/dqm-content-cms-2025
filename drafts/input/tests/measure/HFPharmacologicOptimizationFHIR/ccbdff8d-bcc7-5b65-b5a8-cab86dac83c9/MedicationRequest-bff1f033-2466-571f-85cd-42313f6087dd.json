@@ -1,0 +1,73 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "bff1f033-2466-571f-85cd-42313f6087dd",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "community"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "313096",
+        "display": "spironolactone 25 MG Oral Tablet"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/ccbdff8d-bcc7-5b65-b5a8-cab86dac83c9"
+  },
+  "authoredOn": "2027-12-01T09:00:00Z",
+  "requester": {
+    "reference": "Practitioner/48abd422-81ca-50d2-b6eb-8b98df117d8a"
+  },
+  "dosageInstruction": [
+    {
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 1,
+            "unit": "tablet",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+            "code": "TAB"
+          }
+        }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "numberOfRepeatsAllowed": 0,
+    "quantity": {
+      "value": 30,
+      "unit": "tablet",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+      "code": "TAB"
+    },
+    "expectedSupplyDuration": {
+      "value": 30,
+      "unit": "days",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  }
+}

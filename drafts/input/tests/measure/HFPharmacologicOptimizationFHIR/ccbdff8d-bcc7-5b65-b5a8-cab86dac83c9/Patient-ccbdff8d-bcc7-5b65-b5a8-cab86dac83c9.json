@@ -1,0 +1,25 @@
+{
+  "resourceType": "Patient",
+  "id": "ccbdff8d-bcc7-5b65-b5a8-cab86dac83c9",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/hf-draft-test",
+      "value": "continued-fail"
+    }
+  ],
+  "name": [
+    {
+      "family": "HFPharma",
+      "given": [
+        "ContinuedFail"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1960-05-01"
+}
